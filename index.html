@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-bt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+
+    <title>Projeto Calculadora EMI</title>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <h2>Loan EMI Calculator</h2>
+      <span class="div-bar"></span>
+      <div class="calculator">
+        <div class="calculator-input">
+          <label for="">Loan Amount (Rs.):</label>
+          <input type="number" id="loan-amount" />
+        </div>
+        <div class="calculator-input">Loan Tenure (Year.):</div>
+        <input type="number" id="loan-tenure" />
+        <div class="calculator-input">Interest Rate (%)</div>
+        <input type="number" id="loan-interest" />
+        <div class="calculator-input">
+          <button class="calculator-btn">Calculate EMI</button>
+        </div>
+      </div>
+
+      <div class="calculator-result">
+        <!---Canvas-->
+        <canvas id="loanChart"></canvas>
+        <ul>
+          <li>Montlhy Loan EMI:<span class="loan_emi"></span></li>
+          <li>Principle Amount:<span class="loan_principle"></span></li>
+          <li>Loan on Interest:<span class="loan_interest_rate"></span></li>
+          <li>Total Amount to be paid:<span class="loan_total"></span></li>
+        </ul>
+      </div>
+    </div>
+    <script src="./index.js"></script>
+  </body>
+</html>
